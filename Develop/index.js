@@ -62,19 +62,17 @@ inquirer
     },
   ])
   .then((data) => {
-    generateMarkdown(data)
+    // generateMarkdown(data)
     
    
-
-
     // // TODO: Create a function to write README file
-    // fs.writeFile("README.md", markdownContent, (err) => {
-    //   if (err) {
-    //     console.error(err);
-    //   } else {
-    //     console.log("Success! Your README file has been created.");
-    //   }
-    // });
+    fs.writeFile("README.md", generateMarkdown(data), (err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log("Success! Your README file has been created.");
+      }
+    });
   });
 
 }
