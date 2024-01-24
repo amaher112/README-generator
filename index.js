@@ -75,8 +75,5 @@ inquirer
 
 }
 
-function writeToFile(README, data) {
-}
-
 // Function call to initialize app
 init();
