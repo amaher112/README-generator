@@ -64,7 +64,7 @@ inquirer
   .then((data) => {
  
     // Function to write README file
-    fs.writeFile("README.md", generateMarkdown(data), (err) => {
+    fs.writeFile("README-1.md", generateMarkdown(data), (err) => {
       if (err) {
         console.error(err);
       } else {
