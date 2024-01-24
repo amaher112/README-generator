@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   switch (license) {
     case "Apache":
@@ -17,15 +16,29 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// Function that returns the license link
+function renderLicenseLink(license) {
+  switch (license) {
+    case "Apache":
+      return "[Apache](https://opensource.org/licenses/Apache-2.0)";
+    case "Elipse":
+      return "[Elipse](https://opensource.org/licenses/EPL-1.0)";
+    case "MIT":
+      return "[MIT](https://opensource.org/licenses/MIT)";
+    case "Mozilla":
+      return "[Mozilla](https://opensource.org/licenses/MPL-2.0)";
+    case "Perl":
+      return "[Perl](https://opensource.org/licenses/Artistic-2.0)";
+    default:
+      return "";
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data.license)}
   ## Description
@@ -46,7 +59,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  This project is licensed under the ${data.license} license.
+  This project is licensed under the ${renderLicenseLink(data.license)} license.
 
   ## Contributing
   ${data.contributing}
